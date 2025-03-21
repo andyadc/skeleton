@@ -11,6 +11,7 @@
 
     <modules>
         <module>summer-step-by-step</module>
+        <module>summer-framework</module>
     </modules>
 
     <properties>
