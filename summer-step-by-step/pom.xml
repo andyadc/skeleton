@@ -11,6 +11,7 @@
 
     <modules>
         <module>resource-resolver</module>
+        <module>property-resolver</module>
     </modules>
 
     <properties>
