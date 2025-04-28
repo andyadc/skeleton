@@ -115,7 +115,7 @@ public class AnnotationConfigApplicationContext {
 
     /**
      * Scan factory method that annotated with @Bean:
-     *
+     * <p>
      * <code>
      * &#64;Configuration
      * public class Hello {
@@ -262,7 +262,7 @@ public class AnnotationConfigApplicationContext {
             return defs.get(0);
         }
         // more than 1 beans, require @Primary:
-        List<BeanDefinition> primaryDefs = defs.stream().filter(BeanDefinition::isPrimary).collect(Collectors.toList());
+        List<BeanDefinition> primaryDefs = defs.stream().filter(BeanDefinition::isPrimary).toList();
         if (primaryDefs.size() == 1) {
             return primaryDefs.get(0);
         }
@@ -275,7 +275,7 @@ public class AnnotationConfigApplicationContext {
 
     /**
      * Get order by:
-     *
+     * <p>
      * <code>
      * &#64;Order(100)
      * &#64;Component
@@ -289,7 +289,7 @@ public class AnnotationConfigApplicationContext {
 
     /**
      * Get order by:
-     *
+     * <p>
      * <code>
      * &#64;Order(100)
      * &#64;Bean
