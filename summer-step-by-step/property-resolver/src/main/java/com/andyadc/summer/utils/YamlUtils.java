@@ -20,9 +20,7 @@ public class YamlUtils {
         NoImplicitResolver resolver = new NoImplicitResolver();
         Yaml yaml = new Yaml(new Constructor(loaderOptions), representer, dumperOptions, loaderOptions, resolver);
 
-        return ClassPathUtils.readInputStream(path, (input) -> {
-            return yaml.load(input);
-        });
+        return ClassPathUtils.readInputStream(path, yaml::load);
     }
 
     public static Map<String, Object> loadYamlAsPlainMap(String path) {
