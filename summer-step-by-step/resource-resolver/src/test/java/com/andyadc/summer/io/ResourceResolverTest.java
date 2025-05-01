@@ -15,7 +15,7 @@ public class ResourceResolverTest {
 
     @Test
     public void scanClass() {
-        String pkg = "com.andyadc.summer";
+        String pkg = "com.andyadc";
         ResourceResolver resolver = new ResourceResolver(pkg);
         List<String> classes = resolver.scan(resource -> {
             String name = resource.name();
@@ -30,8 +30,8 @@ public class ResourceResolverTest {
 
         String[] listClasses = new String[]{
                 // list of some scan classes:
-                "com.andyadc.summer.scan.MapTest", //
-                "com.andyadc.summer.scan.file.IOTest", //
+                "com.andyadc.scan.MapTest", //
+                "com.andyadc.scan.file.IOTest", //
         };
         for (String clazz : listClasses) {
             assertTrue(classes.contains(clazz));

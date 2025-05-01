@@ -16,10 +16,9 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Enumeration;
-import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.function.Function;
 
 public class ResourceResolver {
@@ -98,8 +97,7 @@ public class ResourceResolver {
     }
 
     private Path jarUriToPath(String basePackagePath, URI jarUri) throws IOException {
-        // Collections.unmodifiableMap(new HashMap<>()) -> Map.of()
-        return FileSystems.newFileSystem(jarUri, Collections.unmodifiableMap(new HashMap<>())).getPath(basePackagePath);
+        return FileSystems.newFileSystem(jarUri, Map.of()).getPath(basePackagePath);
     }
 
     private String removeTrailingSlash(String s) {
