@@ -10,9 +10,9 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>skeleton-bom</module>
         <module>summer-step-by-step</module>
         <module>summer-framework</module>
-        <module>skeleton-bom</module>
     </modules>
 
     <properties>
