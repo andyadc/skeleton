@@ -16,6 +16,8 @@
         <module>property-resolver</module>
         <module>create-bean-definitions</module>
         <module>create-bean-instances</module>
+        <module>init-beans</module>
+        <module>bean-post-processor</module>
     </modules>
 
     <properties>
