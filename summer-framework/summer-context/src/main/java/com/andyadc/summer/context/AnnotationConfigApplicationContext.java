@@ -113,7 +113,7 @@ public class AnnotationConfigApplicationContext implements ConfigurableApplicati
         // 获取BeanDefinition列表:
         List<BeanDefinition> defs = this.beans.values().stream()
                 // filter bean definitions by not instantiation:
-                .filter(def -> def.getInstance() == null).sorted().collect(Collectors.toList());
+                .filter(def -> def.getInstance() == null).sorted().toList();
 
         defs.forEach(def -> {
             // 如果Bean未被创建(可能在其他Bean的构造方法注入前被创建):
@@ -345,7 +345,7 @@ public class AnnotationConfigApplicationContext implements ConfigurableApplicati
             return defs.get(0);
         }
         // more than 1 beans, require @Primary:
-        List<BeanDefinition> primaryDefs = defs.stream().filter(def -> def.isPrimary()).collect(Collectors.toList());
+        List<BeanDefinition> primaryDefs = defs.stream().filter(def -> def.isPrimary()).toList();
         if (primaryDefs.size() == 1) {
             return primaryDefs.get(0);
         }
@@ -650,7 +650,7 @@ public class AnnotationConfigApplicationContext implements ConfigurableApplicati
 
     /**
      * Get order by:
-     *
+     * <p>
      * <code>
      * &#64;Order(100)
      * &#64;Bean

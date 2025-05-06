@@ -161,7 +161,7 @@ public class BeanDefinition implements Comparable<BeanDefinition> {
 
     String getCreateDetail() {
         if (this.factoryMethod != null) {
-            String params = String.join(", ", Arrays.stream(this.factoryMethod.getParameterTypes()).map(t -> t.getSimpleName()).toArray(String[]::new));
+            String params = String.join(", ", Arrays.stream(this.factoryMethod.getParameterTypes()).map(Class::getSimpleName).toArray(String[]::new));
             return this.factoryMethod.getDeclaringClass().getSimpleName() + "." + this.factoryMethod.getName() + "(" + params + ")";
         }
         return null;
