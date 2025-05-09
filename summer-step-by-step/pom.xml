@@ -18,6 +18,7 @@
         <module>create-bean-instances</module>
         <module>init-beans</module>
         <module>bean-post-processor</module>
+        <module>proxy-resolver</module>
     </modules>
 
     <properties>
