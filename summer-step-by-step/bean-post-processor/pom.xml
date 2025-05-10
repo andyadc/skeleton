@@ -11,6 +11,8 @@
 
     <artifactId>bean-post-processor</artifactId>
 
+    <name>summer.step06.bean-post-processor</name>
+
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>

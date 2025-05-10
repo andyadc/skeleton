@@ -11,7 +11,7 @@
 
     <artifactId>proxy-resolver</artifactId>
 
-    <name>summer.step06.proxy-resolver</name>
+    <name>summer.step07.proxy-resolver</name>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
