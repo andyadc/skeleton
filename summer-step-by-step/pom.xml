@@ -19,6 +19,7 @@
         <module>init-beans</module>
         <module>bean-post-processor</module>
         <module>proxy-resolver</module>
+        <module>jdbc-template</module>
     </modules>
 
     <properties>
