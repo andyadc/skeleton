@@ -21,6 +21,7 @@
         <junit.version>5.12.1</junit.version>
 
         <byte-buddy.version>1.12.23</byte-buddy.version>
+        <hikaricp.version>6.3.0</hikaricp.version>
 
         <jakarta.annotation-api.version>3.0.0</jakarta.annotation-api.version>
         <jakarta.servlet-api.version>6.1.0</jakarta.servlet-api.version>
@@ -82,6 +83,17 @@
                 <groupId>net.bytebuddy</groupId>
                 <artifactId>byte-buddy</artifactId>
                 <version>${byte-buddy.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.zaxxer</groupId>
+                <artifactId>HikariCP</artifactId>
+                <version>${hikaricp.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-api</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <dependency>
                 <groupId>org.junit.jupiter</groupId>
