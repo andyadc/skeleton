@@ -84,4 +84,5 @@ public abstract class AnnotationProxyBeanPostProcessor<A extends Annotation> imp
         }
         return (Class<A>) r;
     }
+
 }
