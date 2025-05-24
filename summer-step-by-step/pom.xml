@@ -20,6 +20,9 @@
         <module>bean-post-processor</module>
         <module>proxy-resolver</module>
         <module>jdbc-template</module>
+        <module>web-app-context</module>
+        <module>hello-webapp</module>
+        <module>hello-boot</module>
     </modules>
 
     <properties>
