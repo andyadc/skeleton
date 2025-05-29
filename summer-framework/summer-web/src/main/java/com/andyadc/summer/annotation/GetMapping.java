@@ -6,15 +6,14 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-@Target(ElementType.TYPE)
+@Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-@Component
-public @interface Controller {
+public @interface GetMapping {
 
     /**
-     * Bean name. Default to simple class name with first-letter-lowercase.
+     * URL mapping.
      */
-    String value() default "";
+    String value();
 
 }

@@ -6,15 +6,11 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-@Target(ElementType.TYPE)
+@Target(ElementType.PARAMETER)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-@Component
-public @interface Controller {
+public @interface PathVariable {
 
-    /**
-     * Bean name. Default to simple class name with first-letter-lowercase.
-     */
-    String value() default "";
+    String value();
 
 }
