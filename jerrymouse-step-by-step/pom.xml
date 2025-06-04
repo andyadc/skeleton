@@ -4,16 +4,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.andyadc.skeleton</groupId>
-    <artifactId>skeleton</artifactId>
+    <groupId>com.andyadc.jerrymouse</groupId>
+    <artifactId>jerrymouse-step-by-step</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
 
+    <name>jerrymouse.step-by-step</name>
+
     <modules>
-        <module>skeleton-bom</module>
-        <module>summer-step-by-step</module>
-        <module>summer-framework</module>
-        <module>jerrymouse-step-by-step</module>
+        <module>simple-http-server</module>
     </modules>
 
     <properties>
@@ -21,5 +20,17 @@
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.andyadc.skeleton</groupId>
+                <artifactId>skeleton-bom</artifactId>
+                <version>1.0.0</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>
