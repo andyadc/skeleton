@@ -21,7 +21,6 @@ public class ClassPathUtils {
             }
             return inputStreamCallback.doWithInputStream(input);
         } catch (IOException e) {
-            e.printStackTrace();
             throw new UncheckedIOException(e);
         }
     }
@@ -69,4 +68,5 @@ public class ClassPathUtils {
         }
         return cl;
     }
+
 }
