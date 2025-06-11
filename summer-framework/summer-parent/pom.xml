@@ -19,7 +19,8 @@
         <bytebuddy.version>1.12.23</bytebuddy.version>
         <hikaricp.version>6.3.0</hikaricp.version>
         <tomcat.version>11.0.5</tomcat.version>
-        <junit.version>5.12.1</junit.version>
+        <snakeyaml.version>2.3</snakeyaml.version>
+        <junit.version>5.13.1</junit.version>
 
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
@@ -79,6 +80,11 @@
                 <groupId>org.apache.tomcat.embed</groupId>
                 <artifactId>tomcat-embed-jasper</artifactId>
                 <version>${tomcat.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.yaml</groupId>
+                <artifactId>snakeyaml</artifactId>
+                <version>${snakeyaml.version}</version>
             </dependency>
 
             <dependency>
