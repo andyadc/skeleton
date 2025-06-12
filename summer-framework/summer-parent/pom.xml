@@ -20,6 +20,7 @@
         <hikaricp.version>6.3.0</hikaricp.version>
         <tomcat.version>11.0.5</tomcat.version>
         <snakeyaml.version>2.3</snakeyaml.version>
+        <freemarker.version>2.3.33</freemarker.version>
         <junit.version>5.13.1</junit.version>
 
         <maven.compiler.source>17</maven.compiler.source>
@@ -85,6 +86,12 @@
                 <groupId>org.yaml</groupId>
                 <artifactId>snakeyaml</artifactId>
                 <version>${snakeyaml.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.freemarker</groupId>
+                <artifactId>freemarker</artifactId>
+                <version>${freemarker.version}</version>
             </dependency>
 
             <dependency>
