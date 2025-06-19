@@ -23,6 +23,7 @@
         <byte-buddy.version>1.12.23</byte-buddy.version>
         <hikaricp.version>6.3.0</hikaricp.version>
 
+        <!-- jakarta -->
         <jakarta.annotation-api.version>3.0.0</jakarta.annotation-api.version>
         <jakarta.servlet-api.version>6.1.0</jakarta.servlet-api.version>
         <jakarta.persistence-api.version>3.2.0</jakarta.persistence-api.version>
