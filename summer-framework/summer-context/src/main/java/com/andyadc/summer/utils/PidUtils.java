@@ -34,5 +34,7 @@ public class PidUtils {
         // 示例：获取并打印当前JVM的PID
         long pid = getPid();
         System.out.println("Current JVM PID: " + pid);
+
+        System.out.println(ManagementFactory.getRuntimeMXBean().getPid());
     }
 }

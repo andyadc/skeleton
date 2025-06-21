@@ -14,7 +14,7 @@ import java.util.Map;
 /**
  * Parse yaml by snakeyaml:
  * <p>
- * https://github.com/snakeyaml/snakeyaml
+ * <a href="https://github.com/snakeyaml/snakeyaml">...</a>
  */
 public class YamlUtils {
 
