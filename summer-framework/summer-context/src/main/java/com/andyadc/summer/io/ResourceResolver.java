@@ -5,7 +5,6 @@ import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.io.UncheckedIOException;
-import java.io.UnsupportedEncodingException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
@@ -67,7 +66,7 @@ public class ResourceResolver {
     private <R> void scanFile(boolean isJar, String base, Path root, List<R> collector, Function<Resource, R> mapper) throws IOException {
         String baseDir = removeTrailingSlash(base);
         Files.walk(root).filter(Files::isRegularFile).forEach(file -> {
-            Resource res = null;
+            Resource res;
             if (isJar) {
                 res = new Resource(baseDir, removeLeadingSlash(file.toString()));
             } else {
@@ -75,7 +74,7 @@ public class ResourceResolver {
                 String name = removeLeadingSlash(path.substring(baseDir.length()));
                 res = new Resource("file:" + path, name);
             }
-            logger.info("found resource: {}", res);
+            logger.info("Found resource: {}", res);
             R r = mapper.apply(res);
             if (r != null) {
                 collector.add(r);
@@ -84,7 +83,7 @@ public class ResourceResolver {
     }
 
     private ClassLoader getContextClassLoader() {
-        ClassLoader cl = null;
+        ClassLoader cl;
         cl = Thread.currentThread().getContextClassLoader();
         if (cl == null) {
             cl = getClass().getClassLoader();
@@ -92,7 +91,7 @@ public class ResourceResolver {
         return cl;
     }
 
-    private String uriToString(URI uri) throws UnsupportedEncodingException {
+    private String uriToString(URI uri) {
         return URLDecoder.decode(uri.toString(), StandardCharsets.UTF_8);
     }
 
