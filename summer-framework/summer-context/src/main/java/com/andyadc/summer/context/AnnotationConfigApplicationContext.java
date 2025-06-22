@@ -90,14 +90,10 @@ public class AnnotationConfigApplicationContext implements ConfigurableApplicati
         createNormalBeans();
 
         // 通过字段和set方法注入依赖:
-        this.beans.values().forEach(def -> {
-            injectBean(def);
-        });
+        this.beans.values().forEach(this::injectBean);
 
         // 调用init方法:
-        this.beans.values().forEach(def -> {
-            initBean(def);
-        });
+        this.beans.values().forEach(this::initBean);
 
         if (logger.isDebugEnabled()) {
             this.beans.values().stream().sorted().forEach(def -> {
@@ -270,6 +266,7 @@ public class AnnotationConfigApplicationContext implements ConfigurableApplicati
     /**
      * 通过Name查找Bean，不存在时抛出NoSuchBeanDefinitionException
      */
+    @SuppressWarnings("unchecked")
     @Override
     public <T> T getBean(String name) {
         BeanDefinition def = this.beans.get(name);
@@ -294,6 +291,7 @@ public class AnnotationConfigApplicationContext implements ConfigurableApplicati
     /**
      * 通过Type查找Bean，不存在抛出NoSuchBeanDefinitionException，存在多个但缺少唯一@Primary标注抛出NoUniqueBeanDefinitionException
      */
+    @SuppressWarnings("unchecked")
     @Override
     public <T> T getBean(Class<T> requiredType) {
         BeanDefinition def = findBeanDefinition(requiredType);
@@ -306,12 +304,12 @@ public class AnnotationConfigApplicationContext implements ConfigurableApplicati
     /**
      * 通过Type查找Beans
      */
+    @SuppressWarnings("unchecked")
     @Override
     public <T> List<T> getBeans(Class<T> requiredType) {
         List<BeanDefinition> defs = findBeanDefinitions(requiredType);
         if (defs.isEmpty()) {
-            // java version 9+ List.of();
-            return Collections.emptyList();
+            return List.of();
         }
         List<T> list = new ArrayList<>(defs.size());
         for (BeanDefinition def : defs) {
@@ -673,7 +671,7 @@ public class AnnotationConfigApplicationContext implements ConfigurableApplicati
     }
 
     // findXxx与getXxx类似，但不存在时返回null
-
+    @SuppressWarnings("unchecked")
     protected <T> T findBean(String name, Class<T> requiredType) {
         BeanDefinition def = findBeanDefinition(name, requiredType);
         if (def == null) {
@@ -682,6 +680,7 @@ public class AnnotationConfigApplicationContext implements ConfigurableApplicati
         return (T) def.getRequiredInstance();
     }
 
+    @SuppressWarnings("unchecked")
     protected <T> T findBean(Class<T> requiredType) {
         BeanDefinition def = findBeanDefinition(requiredType);
         if (def == null) {
@@ -690,8 +689,11 @@ public class AnnotationConfigApplicationContext implements ConfigurableApplicati
         return (T) def.getRequiredInstance();
     }
 
+    @SuppressWarnings("unchecked")
     protected <T> List<T> findBeans(Class<T> requiredType) {
-        return findBeanDefinitions(requiredType).stream().map(def -> (T) def.getRequiredInstance()).collect(Collectors.toList());
+        return findBeanDefinitions(requiredType).stream().map(
+                def -> (T) def.getRequiredInstance()
+        ).collect(Collectors.toList());
     }
 
     /**
