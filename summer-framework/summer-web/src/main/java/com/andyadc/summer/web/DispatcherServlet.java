@@ -270,8 +270,9 @@ public class DispatcherServlet extends HttpServlet {
 
     static class Dispatcher {
 
-        final static Result NOT_PROCESSED = new Result(false, null);
         final Logger logger = LoggerFactory.getLogger(getClass());
+
+        final static Result NOT_PROCESSED = new Result(false, null);
 
         boolean isRest;
         boolean isResponseBody;

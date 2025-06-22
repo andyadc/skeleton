@@ -15,8 +15,9 @@ import java.lang.reflect.Method;
  */
 public class ProxyResolver {
 
-    private static ProxyResolver INSTANCE = null;
     final Logger logger = LoggerFactory.getLogger(getClass());
+
+    private static ProxyResolver INSTANCE = null;
     final ByteBuddy byteBuddy = new ByteBuddy();
 
     private ProxyResolver() {

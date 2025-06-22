@@ -61,7 +61,7 @@ public class ClassPathUtils {
     }
 
     private static ClassLoader getContextClassLoader() {
-        ClassLoader cl = null;
+        ClassLoader cl;
         cl = Thread.currentThread().getContextClassLoader();
         if (cl == null) {
             cl = ClassPathUtils.class.getClassLoader();
