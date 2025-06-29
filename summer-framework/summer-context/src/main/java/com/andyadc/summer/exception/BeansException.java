@@ -1,7 +1,10 @@
 package com.andyadc.summer.exception;
 
+import java.io.Serial;
+
 public class BeansException extends NestedRuntimeException {
 
+    @Serial
     private static final long serialVersionUID = 1372323556495306865L;
 
     public BeansException() {

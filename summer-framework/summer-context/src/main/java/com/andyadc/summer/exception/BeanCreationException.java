@@ -1,7 +1,10 @@
 package com.andyadc.summer.exception;
 
+import java.io.Serial;
+
 public class BeanCreationException extends BeansException {
 
+    @Serial
     private static final long serialVersionUID = -6478941217222955753L;
 
     public BeanCreationException() {
