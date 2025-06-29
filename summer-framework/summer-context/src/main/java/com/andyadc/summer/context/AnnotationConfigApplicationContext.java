@@ -512,7 +512,7 @@ public class AnnotationConfigApplicationContext implements ConfigurableApplicati
         Map<String, BeanDefinition> defs = new HashMap<>();
         for (String className : classNameSet) {
             // 获取Class:
-            Class<?> clazz = null;
+            Class<?> clazz;
             try {
                 clazz = Class.forName(className);
             } catch (ClassNotFoundException e) {
