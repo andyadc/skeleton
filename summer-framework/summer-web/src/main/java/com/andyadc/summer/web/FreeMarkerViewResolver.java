@@ -60,7 +60,7 @@ public class FreeMarkerViewResolver implements ViewResolver {
 
     @Override
     public void render(String viewName, Map<String, Object> model, HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Template templ = null;
+        Template templ;
         try {
             templ = this.config.getTemplate(viewName);
         } catch (Exception e) {
@@ -125,16 +125,16 @@ class ServletTemplateLoader implements TemplateLoader {
 
     @Override
     public long getLastModified(Object templateSource) {
-        if (templateSource instanceof File) {
-            return ((File) templateSource).lastModified();
+        if (templateSource instanceof File templateSourceFile) {
+            return templateSourceFile.lastModified();
         }
         return 0;
     }
 
     @Override
     public Reader getReader(Object templateSource, String encoding) throws IOException {
-        if (templateSource instanceof File) {
-            return new InputStreamReader(new FileInputStream((File) templateSource), encoding);
+        if (templateSource instanceof File templateSourceFile) {
+            return new InputStreamReader(new FileInputStream(templateSourceFile), encoding);
         }
         throw new IOException("File not found.");
     }
