@@ -1,4 +1,4 @@
-package com.andyadc.summer.utils;
+package com.andyadc.summer;
 
 import java.lang.management.ManagementFactory;
 
