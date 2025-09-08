@@ -23,6 +23,9 @@ public class JsonUtils {
      */
     public static final ObjectMapper OBJECT_MAPPER = createObjectMapper();
 
+    public static final TypeReference<Map<String, Object>> mapTypeReference = new TypeReference<>() {
+    };
+
     private static ObjectMapper createObjectMapper() {
         final ObjectMapper mapper = new ObjectMapper();
         mapper.setSerializationInclusion(JsonInclude.Include.ALWAYS);
