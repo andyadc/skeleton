@@ -21,7 +21,7 @@
         <junit-jupiter.version>5.12.2</junit-jupiter.version>
 
         <byte-buddy.version>1.17.7</byte-buddy.version>
-        <hikaricp.version>6.3.2</hikaricp.version>
+        <hikaricp.version>6.3.3</hikaricp.version>
 
         <!-- jakarta -->
         <jakarta.annotation-api.version>2.1.1</jakarta.annotation-api.version>
