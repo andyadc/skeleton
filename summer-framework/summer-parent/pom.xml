@@ -12,16 +12,16 @@
     <description>Summer Framework</description>
 
     <properties>
-        <jakarta.annotation.version>3.0.0</jakarta.annotation.version>
-        <jakarta.servlet.version>6.1.0</jakarta.servlet.version>
+        <jakarta.annotation.version>2.1.1</jakarta.annotation.version>
+        <jakarta.servlet.version>6.0.0</jakarta.servlet.version>
         <slf4j.version>2.0.17</slf4j.version>
-        <jackson.version>2.18.3</jackson.version>
-        <bytebuddy.version>1.12.23</bytebuddy.version>
-        <hikaricp.version>6.3.0</hikaricp.version>
-        <tomcat.version>11.0.7</tomcat.version>
+        <jackson.version>2.19.2</jackson.version>
+        <bytebuddy.version>1.17.7</bytebuddy.version>
+        <hikaricp.version>6.3.3</hikaricp.version>
+        <tomcat.version>10.1.46</tomcat.version>
         <snakeyaml.version>2.3</snakeyaml.version>
         <freemarker.version>2.3.33</freemarker.version>
-        <junit.version>5.13.2</junit.version>
+        <junit.version>5.12.2</junit.version>
 
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
