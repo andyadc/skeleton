@@ -16,9 +16,9 @@
 
     <properties>
         <slf4j.version>2.0.17</slf4j.version>
-        <logback.version>1.5.18</logback.version>
+        <logback.version>1.5.19</logback.version>
         <snakeyaml.version>2.3</snakeyaml.version>
-        <junit-jupiter.version>5.12.2</junit-jupiter.version>
+        <junit-jupiter.version>5.13.2</junit-jupiter.version>
 
         <byte-buddy.version>1.17.7</byte-buddy.version>
         <hikaricp.version>6.3.3</hikaricp.version>
