@@ -1,6 +1,7 @@
 package com.andyadc.skeleton.shield.test.model;
 
 public class TestBClass {
+
     private String a;
     private String b;
     private Integer bint;
@@ -46,5 +47,6 @@ public class TestBClass {
     public void setC(String c) {
         this.c = c;
     }
+
 }
 
