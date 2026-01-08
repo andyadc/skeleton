@@ -3,20 +3,13 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.andyadc.skeleton</groupId>
+        <artifactId>skeleton</artifactId>
+        <version>1.0.0</version>
+    </parent>
 
-    <groupId>com.andyadc.skeleton</groupId>
-    <artifactId>skeleton</artifactId>
-    <version>1.0.0</version>
-    <packaging>pom</packaging>
-
-    <modules>
-        <module>skeleton-bom</module>
-        <module>summer-step-by-step</module>
-        <module>summer-framework</module>
-        <module>jerrymouse-step-by-step</module>
-        <module>sensitive-plugin</module>
-        <module>redis-plugin</module>
-    </modules>
+    <artifactId>redis-plugin</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
