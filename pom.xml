@@ -16,6 +16,7 @@
         <module>jerrymouse-step-by-step</module>
         <module>sensitive-plugin</module>
         <module>redis-plugin</module>
+        <module>NCache</module>
     </modules>
 
     <properties>
