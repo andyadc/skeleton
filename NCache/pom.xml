@@ -18,6 +18,13 @@
 
         <slf4j.version>2.0.17</slf4j.version>
         <logback.version>1.5.22</logback.version>
+        <caffeine.version>3.2.3</caffeine.version>
+        <jedis.version>6.2.0</jedis.version>
+        <jackson.version>2.19.3</jackson.version>
+        <micrometer.version>1.15.7</micrometer.version>
+        <spring-boot.version>3.5.9</spring-boot.version>
+        <aspectjweaver.version>1.9.25.1</aspectjweaver.version>
+
     </properties>
 
     <dependencies>
@@ -29,13 +36,17 @@
         <dependency>
             <groupId>com.github.ben-manes.caffeine</groupId>
             <artifactId>caffeine</artifactId>
-            <version>3.2.3</version>
+            <version>${caffeine.version}</version>
         </dependency>
         <dependency>
             <groupId>redis.clients</groupId>
             <artifactId>jedis</artifactId>
-            <version>6.2.0</version>
+            <version>${jedis.version}</version>
             <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-api</artifactId>
+                </exclusion>
                 <exclusion>
                     <groupId>com.google.code.gson</groupId>
                     <artifactId>gson</artifactId>
@@ -45,32 +56,32 @@
         <dependency>
             <groupId>com.fasterxml.jackson.datatype</groupId>
             <artifactId>jackson-datatype-jsr310</artifactId>
-            <version>2.19.3</version>
+            <version>${jackson.version}</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>io.micrometer</groupId>
             <artifactId>micrometer-core</artifactId>
-            <version>1.15.7</version>
+            <version>${micrometer.version}</version>
             <scope>compile</scope>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-autoconfigure</artifactId>
-            <version>3.5.9</version>
+            <version>${spring-boot.version}</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-actuator-autoconfigure</artifactId>
-            <version>3.5.7</version>
+            <version>${spring-boot.version}</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
-            <version>1.9.25.1</version>
+            <version>${aspectjweaver.version}</version>
         </dependency>
 
         <dependency>
@@ -78,6 +89,12 @@
             <artifactId>logback-classic</artifactId>
             <version>${logback.version}</version>
             <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-api</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 
