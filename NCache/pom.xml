@@ -17,7 +17,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <slf4j.version>2.0.17</slf4j.version>
-        <logback.version>1.5.22</logback.version>
+        <logback.version>1.5.25</logback.version>
         <caffeine.version>3.2.3</caffeine.version>
         <jedis.version>6.2.0</jedis.version>
         <jackson.version>2.19.3</jackson.version>
