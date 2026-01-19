@@ -19,7 +19,7 @@
         <bytebuddy.version>1.17.8</bytebuddy.version>
         <hikaricp.version>6.3.3</hikaricp.version>
         <tomcat.version>10.1.50</tomcat.version>
-        <snakeyaml.version>2.3</snakeyaml.version>
+        <snakeyaml.version>2.5</snakeyaml.version>
         <freemarker.version>2.3.33</freemarker.version>
         <junit.version>5.13.2</junit.version>
 
