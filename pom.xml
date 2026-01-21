@@ -17,6 +17,7 @@
         <module>sensitive-plugin</module>
         <module>redis-plugin</module>
         <module>NCache</module>
+        <module>practice-redis</module>
     </modules>
 
     <properties>
