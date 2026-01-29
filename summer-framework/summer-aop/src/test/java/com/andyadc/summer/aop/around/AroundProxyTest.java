@@ -1,7 +1,7 @@
 package com.andyadc.summer.aop.around;
 
-import com.itranswarp.summer.context.AnnotationConfigApplicationContext;
-import com.itranswarp.summer.io.PropertyResolver;
+import com.andyadc.summer.context.AnnotationConfigApplicationContext;
+import com.andyadc.summer.io.PropertyResolver;
 import org.junit.jupiter.api.Test;
 
 import java.util.Properties;

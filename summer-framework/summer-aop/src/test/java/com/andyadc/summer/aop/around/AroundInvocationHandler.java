@@ -1,6 +1,6 @@
 package com.andyadc.summer.aop.around;
 
-import com.itranswarp.summer.annotation.Component;
+import com.andyadc.summer.annotation.Component;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
