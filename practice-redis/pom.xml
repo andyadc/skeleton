@@ -17,8 +17,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <slf4j.version>2.0.17</slf4j.version>
-        <logback.version>1.5.25</logback.version>
+        <logback.version>1.5.26</logback.version>
         <jedis.version>6.2.0</jedis.version>
+        <lettuce.version>6.8.2.RELEASE</lettuce.version>
         <jackson.version>2.19.3</jackson.version>
         <junit-jupiter.version>5.13.2</junit-jupiter.version>
         <testcontainers.version>1.21.4</testcontainers.version>
@@ -41,6 +42,13 @@
                     <artifactId>gson</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+
+        <!-- Lettuce Redis Client -->
+        <dependency>
+            <groupId>io.lettuce</groupId>
+            <artifactId>lettuce-core</artifactId>
+            <version>${lettuce.version}</version>
         </dependency>
 
         <!-- JSON Processing -->
