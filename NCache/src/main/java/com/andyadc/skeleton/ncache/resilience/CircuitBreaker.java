@@ -15,6 +15,7 @@ import java.util.function.Supplier;
 public class CircuitBreaker {
 
     private static final Logger logger = LoggerFactory.getLogger(CircuitBreaker.class);
+
     private final String name;
     private final CircuitBreakerConfig config;
     private final AtomicReference<State> state = new AtomicReference<>(State.CLOSED);
@@ -23,6 +24,7 @@ public class CircuitBreaker {
     private final AtomicInteger halfOpenCalls = new AtomicInteger(0);
     private volatile Instant lastFailureTime;
     private volatile Instant openedAt;
+
     public CircuitBreaker(String name, CircuitBreakerConfig config) {
         this.name = name;
         this.config = config;
@@ -59,10 +61,10 @@ public class CircuitBreaker {
         State currentState = state.get();
 
         switch (currentState) {
-            case CLOSED:
+            case CLOSED -> {
                 return true;
-
-            case OPEN:
+            }
+            case OPEN -> {
                 if (shouldAttemptReset()) {
                     if (state.compareAndSet(State.OPEN, State.HALF_OPEN)) {
                         halfOpenCalls.set(0);
@@ -71,12 +73,13 @@ public class CircuitBreaker {
                     return true;
                 }
                 return false;
-
-            case HALF_OPEN:
+            }
+            case HALF_OPEN -> {
                 return halfOpenCalls.incrementAndGet() <= config.getHalfOpenMaxCalls();
-
-            default:
+            }
+            default -> {
                 return false;
+            }
         }
     }
 
@@ -150,4 +153,5 @@ public class CircuitBreaker {
             super(message);
         }
     }
+
 }
