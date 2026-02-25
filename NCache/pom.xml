@@ -20,8 +20,8 @@
         <logback.version>1.5.32</logback.version>
         <caffeine.version>3.2.3</caffeine.version>
         <jedis.version>6.2.0</jedis.version>
-        <jackson.version>2.19.3</jackson.version>
-        <micrometer.version>1.15.7</micrometer.version>
+        <jackson.version>2.21.1</jackson.version>
+        <micrometer.version>1.15.9</micrometer.version>
         <spring-boot.version>3.5.9</spring-boot.version>
         <aspectjweaver.version>1.9.25.1</aspectjweaver.version>
 
