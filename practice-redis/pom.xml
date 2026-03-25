@@ -20,7 +20,7 @@
         <logback.version>1.5.32</logback.version>
         <jedis.version>6.2.0</jedis.version>
         <lettuce.version>6.8.2.RELEASE</lettuce.version>
-        <jackson.version>2.21.1</jackson.version>
+        <jackson.version>2.21.2</jackson.version>
         <junit-jupiter.version>5.13.2</junit-jupiter.version>
         <testcontainers.version>1.21.4</testcontainers.version>
     </properties>
