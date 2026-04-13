@@ -22,7 +22,7 @@
         <jedis.version>6.2.0</jedis.version>
         <jackson.version>2.21.2</jackson.version>
         <micrometer.version>1.15.10</micrometer.version>
-        <spring-boot.version>3.5.12</spring-boot.version>
+        <spring-boot.version>3.5.13</spring-boot.version>
         <aspectjweaver.version>1.9.25.1</aspectjweaver.version>
 
     </properties>
